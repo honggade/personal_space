@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张振洪的简历 - 游戏客户端开发</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-color: #fcfcfc;
+            --card-bg: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 60px 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        /* 头部区域 */
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .role {
+            font-size: 18px;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info span::before {
+            content: "•";
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        /* 通用区块样式 */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent-color);
+            font-weight: 600;
+            position: relative;
+        }
+
+        /* 教育背景 */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .edu-school {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .edu-details {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        /* 技能特长 */
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        .skills-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        /* 荣誉证书 */
+        .awards-text {
+            font-size: 14px;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        /* 自我评价 */
+        .about-text {
+            font-size: 15px;
+            color: var(--text-light);
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 3px solid #dee2e6;
+        }
+
+        /* 预留的项目经历样式 (高度可拓展) */
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .project-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+        .project-name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .project-role {
+            font-size: 14px;
+            color: var(--accent-color);
+        }
+        .project-tags {
+            margin-bottom: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background: #eef2f5;
+            color: var(--primary-color);
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .project-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 0;
+                border-radius: 0;
+            }
+            .edu-item {
+                flex-direction: column;
+            }
+            .edu-item > div:last-child {
+                margin-top: 5px;
+                color: var(--text-light);
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>张振洪</h1>
+        <div class="role">求职意向：游戏客户端开发 | 广州 | ∞ | 一周内到岗</div>
+        <div class="contact-info">
+            <span>21岁</span>
+            <span>男</span>
+            <span>应届生</span>
+            <span>13266087053</span>
+            <span>813030530@qq.com</span>
+            <span>群众</span>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">教育背景</h2>
+        <div class="edu-item">
+            <div class="edu-school">东莞理工学院 - 计算机科学与技术（本科）</div>
+            <div>2023.09 ~ 至今</div>
+        </div>
+        <div class="edu-details">
+            <strong>专业成绩：</strong>专业前5%<br>
+            <strong>主修课程：</strong>计算机组成原理、数据结构与算法、数据库原理、C#语言程序设计、操作系统等
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">技能特长</h2>
+        <ul class="skills-list">
+            <li>熟练掌握 <strong>C++、C#</strong>，以及 <strong>UE、Unity</strong> 引擎，熟悉常用设计模式，具有良好代码风格。</li>
+            <li>熟悉 <strong>TCP、UDP</strong> 等网络知识，能很好配合服务器开发迭代。</li>
+            <li>熟练使用 <strong>UGUI</strong>，熟悉UGUI相关优化策略，以及CPU和引擎侧的优化。</li>
+            <li>熟练掌握编辑器开发，资源导入提醒，Excel导表工具等。</li>
+            <li>熟练掌握常用算法和数据结构，具有严谨的逻辑思维。</li>
+            <li>熟练使用 Git 等版本管理工具，快速协作。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">项目经历</h2>
+        
+        <div class="project-item">
+            <div class="project-header">
+                <div class="project-name">代号：XXXX（游戏名称）</div>
+                <div class="project-role">核心玩法程序开发</div>
+            </div>
+            <div class="project-tags">
+                <span class="tag">Unity 3D</span>
+                <span class="tag">C#</span>
+                <span class="tag">UGUI</span>
+                <span class="tag">物理系统</span>
+            </div>
+            <div class="project-desc"><strong>项目描述：</strong>此处简短介绍游戏类型、核心玩法或参赛背景（如：基于物理交互的本地双人合作游戏）。</div>
+            <div class="project-desc"><strong>核心负责：</strong>
+                <ul>
+                    <li style="margin-left: 20px;">使用 Unity 实现核心状态机和物理驱动逻辑。</li>
+                    <li style="margin-left: 20px;">优化渲染管线，进行相关性能分析与调优。</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+
+    <section>
+        <h2 class="section-title">荣誉证书</h2>
+        <div class="awards-text">
+            英语四六级、2025第六届SGADC新加坡金沙艺术设计大赛铜奖、2025第五届BICC中英国际创意大赛铜奖、2025第十一届东方设计奖·全国高校创新设计大赛广东赛区三等奖、2025第四届FA国际前沿创新艺术设计大赛中国赛区铜奖、第十六届蓝桥杯广东赛区C/C++程序设计大学B组三等奖。
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">自我评价</h2>
+        <div class="about-text">
+            对游戏开发充满热爱，对游戏有独到理解，能够承担工作压力，热爱生活，学习积极，善于与他人配合，有良好的团队精神。
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
