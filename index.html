@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>张振洪 | 游戏客户端开发</title>
+    <title>Honggade | 游戏客户端开发</title>
     <script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
     <style>
         /* --- 核心变量与主题 --- */
@@ -310,21 +310,22 @@
                 <div class="project-desc-short">一款基于物理引擎与状态机驱动的3D第三人称动作游戏。</div>
                 <div class="tags">
                     <span class="tag">FSM 状态机</span>
-                    <span class="tag">Unity Input System</span>
-                    <span class="tag">物理引擎</span>
+                    <span class="tag">核心 3C 开发</span>
+                    <span class="tag">DrawCall 优化</span>
                 </div>
             </div>
             <div class="hidden-data">
                 <div class="d-title">《秘境大暴走》</div>
                 <div class="d-brief">项目简介：一款基于物理引擎与状态机驱动的3D第三人称动作游戏。玩家需操控具备十余种运动状态的角色，穿越重重障碍。</div>
                 <div class="d-vcode">f5e1878c81a61ad2</div>
-                <div class="d-tags">FSM有限状态机,物理引擎,Shader开发,UGUI,设计模式</div>
+                <div class="d-tags">FSM 状态机,核心 3C 开发,MPB 材质优化,DrawCall 优化,设计模式</div>
                 <div class="d-content">
                     <ul>
-                        <li><span class="highlight">核心状态机与实体架构：</span>设计并实现了包含奔跑、攀爬、贴墙、后空翻、游泳等 10 余种状态的基于有限状态机 (FSM) 的角色控制器。</li>
-                        <li><span class="highlight">逻辑解耦与差异化存储：</span>运用单例模式与观察者模式对核心逻辑进行有效解耦。 综合运用二进制 (Binary)、Json 及 PlayerPrefs 三种形式进行数据序列化与反序列化。</li>
-                        <li><span class="highlight">物理控制与复杂地形交互：</span>采用纯物理运算，精准维护角色水平与垂直维度的分量速度。深度整合 InputSystem 与 Cinemachine。</li>
-                        <li><span class="highlight">组件化事件与特效渲染：</span>基于组件化与观察者模式设计了实体通用死亡特效播放器。 综合运用 MaterialPropertyBlock 技术，实现高性能消融效果。</li>
+                        <li><span class="highlight">核心状态机与实体架构：</span>设计并实现了包含奔跑、攀爬、贴墙、后空翻、游泳等 10 余种状态的基于有限状态机 (FSM) 的角色控制器。构建了通用的实体类（Entity）统计架构，使得敌我单位可以轻松继承与扩展，大幅降低了后期维护成本。</li>
+                        <li><span class="highlight">逻辑解耦与差异化存储：</span>运用单例模式与观察者模式对核心逻辑进行有效解耦。针对不同数据特性设计差异化存储方案：静态配置采用ScriptableObject统一管理；动态存档则依据性能与加密需求，综合运用二进制 (Binary)、Json 及 PlayerPrefs 三种形式进行数据序列化与反序列化。</li>
+                        <li><span class="highlight">物理控制与复杂地形交互：</span>采用纯物理运算，精准维护角色水平与垂直维度的分量速度。深度整合 InputSystem 与 Cinemachine，并通过轮询动态改变动画触发参数以保障动作连贯性。熟练处理复杂 3D 数学与碰撞检测，完美适配沼泽，地刺，传送门，检查点，广告牌，移动板，旗杆，金币盒，木箱，吹风力场等 10+ 种地形元素的交互物理验证。</li>
+                        <li><span class="highlight">UI架构与性能优化：</span>搭建加载、存档、暂停等完整游戏流程 UI 界面。通过合理的动静分离策略有效减少 Draw Call 与 Canvas Rebuild 开销。运用 C# 协程 (Coroutine) 处理时序与效果延迟，结合 Animation 与简易粒子特效强化界面的视听反馈。</li>
+                        <li><span class="highlight">组件化事件与特效渲染：</span>基于组件化与观察者模式设计了所有带有Health组件的实体通用死亡特效播放器，通过监听 Health 组件广播触发特效。综合运用 MaterialPropertyBlock 技术，实现了兼容多材质模型的高性能消融，避免了运行时的合批打断与额外 Draw Call 开销。</li>
                     </ul>
                 </div>
             </div>
@@ -338,17 +339,22 @@
             <div class="project-info">
                 <div class="project-title">特价日</div>
                 <div class="project-desc-short">一款基于 PCG 的无尽跑酷游戏。玩家需在不断起伏的地形中操控购物车躲避障碍收集得分。</div>
-                <div class="tags"><span class="tag">PCG 生成</span><span class="tag">对象池</span></div>
+                <div class="tags">
+                    <span class="tag">PCG 生成</span>
+                    <span class="tag">对象池</span>
+                    <span class="tag">物理射线检测</span>
+                </div>
             </div>
             <div class="hidden-data">
                 <div class="d-title">《特价日》</div>
                 <div class="d-brief">项目简介：一款基于 PCG 的无尽跑酷游戏。玩家需在不断起伏的地形中操控购物车左右横移，躲避障碍并收集蔬菜得分。</div>
                 <div class="d-vcode">1a62e29dd873f906</div>
-                <div class="d-tags">PCG程序化生成,对象池机制,UGUI,C#协程</div>
+                <div class="d-tags">PCG 程序化生成,动态网格构建,对象池机制,物理射线检测</div>
                 <div class="d-content">
                     <ul>
-                        <li><span class="highlight">程序化生成与内存管理：</span>通过运行时动态计算顶点与三角形索引构建圆柱曲面网格，并叠加柏林噪声生成地形。 结合了对象池机制实现了地图的边走边裁。</li>
-                        <li><span class="highlight">反向运动模型与物理检测：</span>采用“地形相对后退、载具仅限横移”的反向运动模型。熟练运用 Collider 与 Rigidbody 进行基础物理模拟。</li>
+                        <li><span class="highlight">程序化生成与内存管理：</span>通过运行时动态计算顶点与三角形索引构建圆柱曲面网格，并叠加柏林噪声生成随机起伏的地形。结合了对象池机制实现了地图的边走边裁，将内存与DrawCall开销控制在极低水平。</li>
+                        <li><span class="highlight">反向运动模型与物理检测：</span>采用“地形相对后退、载具仅限横移”的反向运动模型。熟练运用 Collider 与 Rigidbody进行基础物理模拟，并结合 Physics.Raycast 实时检测接地状态，精准实现载具的动态稳定力施加、障碍物碰撞拦截和触发简单的粒子特效。</li>
+                        <li><span class="highlight">UI状态机与异步交互：</span>基于 UGUI 构建主菜单与游戏计分面板的双场景交互框架，运用 Animator 状态机驱动 UI 元素的平滑切入切出及动态跳分表现。利用 C# 协程 (Coroutine) 封装异步场景加载。</li>
                     </ul>
                 </div>
             </div>
@@ -362,16 +368,27 @@
             <div class="project-info">
                 <div class="project-title">Flappy Bird Lua重构版</div>
                 <div class="project-desc-short">以经典游戏为载体，实现了一套基于 xLua 与 AssetBundle 的支持无缝热重载的架构。</div>
-                <div class="tags"><span class="tag">Lua</span><span class="tag">XLua</span><span class="tag">热更新</span></div>
+                <div class="tags">
+                    <span class="tag">XLua热更新</span>
+                    <span class="tag">AssetBundle</span>
+                    <span class="tag">数据驱动架构</span>
+                </div>
             </div>
             <div class="hidden-data">
                 <div class="d-title">《FlappyBird Lua重构版》</div>
-                <div class="d-brief">项目简介：实现了一套基于 xLua 与 AssetBundle 的全数据驱动、且支持无缝热重载的热更新架构。</div>
+                <div class="d-brief">项目简介：以经典游戏《Flappy Bird》为载体，实现了一套基于 xLua 与 AssetBundle 的全数据驱动、且支持无缝热重载的热更新架构。</div>
                 <div class="d-vcode">0a32e28ffb7dea6c</div>
-                <div class="d-tags">Lua,XLua,AssetBundle,框架搭建</div>
+                <div class="d-tags">xLua 热更新,AssetBundle,数据驱动架构,依赖注入 (DI)</div>
                 <div class="d-content">
                     <ul>
-                        <li><span class="highlight">Lua调用与热更双轨制：</span>针对不同层级的 Lua 代码调用，设计了兼顾开发提效与线上热更的双轨制方案。实现本地源码替换，达成开发期“零编译、即存即看”的热重载。</li>
+                        <li><span class="highlight">数据驱动与AB包分层架构：</span>设计并实现了基于 JSON 配置文件驱动的资源装配架构。将 AssetBundle 科学地划分为常驻核心层 (Core Bundles) 与按需加载的业务层 (Business Bundles)。游戏启动时通过配置表动态解析依赖关系。</li>
+                        <li><span class="highlight">Lua调用与热更双轨制方案：</span>针对不同层级的 Lua 代码调用，设计了兼顾开发提效与线上热更的双轨制方案：
+                            <ul class="sub-list">
+                                <li><b>1. 入口脚本劫持：</b>对于直接挂载在预制体上的入口脚本，通过宏定义 (#if UNITY_EDITOR) 在 C# 组件 (WidgetLuaBehaviour) 执行 DoString 前进行精准劫持，实现本地源码替换，达成开发期“零编译、即存即看”的热重载。</li>
+                                <li><b>2. 模块依赖重定向：</b>对于游戏后期的复杂模块切分，重写了 xLua 虚拟机的 CustomABLoader。通过拦截底层 require 指令并将其重定向至内存 AssetBundle，为后续的多文件庞大业务逻辑提供了坚实的热更基建。</li>
+                            </ul>
+                        </li>
+                        <li><span class="highlight">依赖注入与底层业务分离：</span>在 C# 预制体实例化阶段，通过自定义组件抓取场景实体，以依赖注入 (Injection) 的方式直接将其挂载到 Lua 虚拟机的全局变量中。确立了“C# 负责底层基建与资源装配，Lua 全权接管业务生命周期”的极简开发范式。</li>
                     </ul>
                 </div>
             </div>
