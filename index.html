@@ -394,6 +394,40 @@
             </div>
         </div>
 
+        <div class="project-card" onclick="openModal(this)">
+            <div class="project-cover">
+                <div class="play-btn"></div>
+                <img src="assets/images/UGF.png" alt="商业游戏通用活动 UI 架构">
+            </div>
+            <div class="project-info">
+                <div class="project-title">商业游戏通用活动 UI 架构及业务开发</div>
+                <div class="project-desc-short">基于 UGF 框架的模块化活动系统，涵盖战令、七日登录等核心商业化业务。</div>
+                <div class="tags">
+                    <span class="tag">UGF(Unity GameFrameork)</span>
+                    <span class="tag">MVC/MVP</span>
+                </div>
+            </div>
+            <div class="hidden-data">
+                <div class="d-title">《商业游戏通用活动 UI 架构及业务开发》</div>
+                <div class="d-brief">项目简介：本项目基于 Unity Game Framework (UGF) 构建，旨在提供一套高度抽象、可快速复用的商业化活动 UI 架构，涵盖了战令 (Battle Pass)、七日登录、转盘及背包系统。</div>
+                <div class="d-vcode">a9fa6ac165e67f6d</div>
+                <div class="d-tags">UGF, C#, MVC/MVP, DataTable, 性能优化</div>
+                <div class="d-content">
+                    <ul>
+                        <li><span class="highlight">UI 架构设计与业务解耦：</span>基于 UGF 封装通用的 UI 逻辑基类，采用 MVC/MVP 模式将业务逻辑从表现层彻底抽离。利用框架内置事件系统实现模块间通信，显著提升了业务扩展效率。</li>
+                        <li><span class="highlight">数据驱动开发：</span>结合 UGF 的 DataTable 模块实现活动奖励与任务需求的动态配置。支持通过外部数据表快速迭代业务参数，降低了硬编码风险。</li>
+                        <li><span class="highlight">高性能背包系统（双池化技术）：</span>
+                            <ul class="sub-list">
+                                <li><b>1. 对象池 (Object Pool)：</b>针对背包界面中大量的物品格 (Slot) 组件进行复用，规避了频繁实例化导致的 CPU 瞬时负载与掉帧。</li>
+                                <li><b>2. 引用池 (Reference Pool)：</b>针对底层数据对象 (ItemData) 与派发的事件参数类 (EventArgs)，通过实现 IReference 接口进行循环使用，有效控制了堆内存 (Heap) 分配压力，规避频繁 GC。</li>
+                            </ul>
+                        </li>
+                        <li><span class="highlight">业务模块全覆盖：</span>完整实现了战令系统的等级进阶、七日登录的状态同步以及抽奖系统的核心逻辑，确保了整套架构在商业化场景下的实战能力。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <h2 class="section-title" style="margin-bottom: 20px;">正在做</h2>
