@@ -403,7 +403,7 @@
                 <div class="project-title">商业游戏通用活动 UI 架构及业务开发</div>
                 <div class="project-desc-short">基于 UGF 框架的模块化活动系统，涵盖战令、七日登录等核心商业化业务。</div>
                 <div class="tags">
-                    <span class="tag">UGF(Unity GameFrameork)</span>
+                    <span class="tag">UGF(Unity Game Framework)</span>
                     <span class="tag">MVC/MVP</span>
                 </div>
             </div>
@@ -423,6 +423,36 @@
                             </ul>
                         </li>
                         <li><span class="highlight">业务模块全覆盖：</span>完整实现了战令系统的等级进阶、七日登录的状态同步以及抽奖系统的核心逻辑，确保了整套架构在商业化场景下的实战能力。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" onclick="openModal(this)">
+            <div class="project-cover">
+                <div class="play-btn"></div>
+                <img src="assets/images/AiMiniGames.png" alt="AiMiniGames" onerror="this.style.display='none'">
+            </div>
+            <div class="project-info">
+                <div class="project-title">AI代理驱动经典游戏原型合集</div>
+                <div class="project-desc-short">利用 Claude Code Agent 与 DeepSeek 实现的高效原型开发实践，展示架构整合与逻辑调优能力。</div>
+                <div class="tags">
+                    <span class="tag">AI-Driven Workflow</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">C#</span>
+                </div>
+            </div>
+            <div class="hidden-data">
+                <div class="d-title">《AI代理驱动经典游戏原型合集》</div>
+                <div class="d-brief">项目简介：本项目是一次基于 Agentic Workflow(Claude Code Agent + DeepSeek API) 的前沿开发实践。通过引导 AI Agent 快速生成算法原型，由我负责全局架构设计、代码审计与逻辑微调，整合了三款经典玩法。</div>
+                <div class="d-vcode">791f65e15902ef5c</div>
+                <div class="d-tags">AI-Driven Workflow, Prompt Engineering, Unity C#, 架构整合</div>
+                <div class="d-content">
+                    <ul>
+                        <li><span class="highlight">Agentic 高效开发流：</span>通过 Claude Code 集成 DeepSeek API 驱动 Agent 快速产出消消乐匹配检测、2048 矩阵平移 等核心逻辑。</li>
+                        <li><span class="highlight">数据驱动逻辑与解耦：</span>各子游戏均采用表现层分离设计。例如 2048 通过 BoardState 维护数据，大西瓜通过 WatermelonTierDefinition 动态配置等级，确立了清晰的组件化规范。</li>
+                        <li><span class="highlight">深度算法审计与调优：</span>手动优化了 Agent 产出的消消乐层叠掉落 (Cascade) 递归算法，解决了状态同步隐患；精修了大西瓜的物理碰撞参数，确保合成反馈的丝滑感。</li>
+                        <li><span class="highlight">整合与工程化落地：</span>负责将三款迥异的玩法整合至统一的标准化生产管线，展示了对 AI 生成代码的全局把控力与优秀的工程组织素质。</li>
                     </ul>
                 </div>
             </div>
@@ -501,7 +531,7 @@
             document.getElementById('m-content').innerHTML = dataNode.querySelector('.d-content').innerHTML;
             
             const tagsStr = dataNode.querySelector('.d-tags').innerText;
-            const tagsHtml = tagsStr.split(',').map(t => `<span class="tag">${t.trim()}</span>`).join('');
+            const tagsHtml = tagsStr.split(',').map(t => `<span class=\"tag\">${t.trim()}</span>`).join('');
             document.getElementById('m-tags').innerHTML = tagsHtml;
 
             const container = document.getElementById('player-container');
